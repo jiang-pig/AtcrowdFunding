@@ -55,20 +55,22 @@ public class CrowdTest {
         logger.warn("warn level");
         logger.error("error level");
     }
-
     @Test
     public void testInsertAdmin(){
         Admin admin = new Admin(null,"hhh","123456","哈哈哈","123456789@qq.com",null);
         int count = adminMapper.insertSelective(admin);
         System.out.println("受影响的行数：" + count);
     }
-
-
     @Test
     public void test(){
         for (int i = 107; i < 206; i++) {
             adminMapper.deleteByPrimaryKey(i++);
         }
+    }
+
+    @Test
+    public void test01(){
+        System.out.println("测试");
     }
 
 
